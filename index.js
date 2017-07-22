@@ -19,7 +19,7 @@ function readExcelFile(url) {
 
 async function main() {
     try {
-        let excelFilePath = "interactive_map_data.xlsx";
+        let excelFilePath = "map_data.xlsx";
         const arrayBuffer = await readExcelFile(excelFilePath);
         let data = new Uint8Array(arrayBuffer);
         let arr = [];
