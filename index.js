@@ -60,7 +60,7 @@ async function main() {
                     elem.prop("title", `Finish: ${elem.prop("title")}`);
                 }
                 if (sheetName === "Events") {
-                    const dest = $(`[id='${sheet[`E${row}`].v}']`);
+                    const dest = $(`[id='${sheet[`F${row}`].v}']`);
                     console.log(dest);
                     elem.tooltipster({
                         functionBefore: () => dest.tooltipster("open"),
