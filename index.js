@@ -52,27 +52,32 @@ async function main() {
                 elem.prop("shape", "circle");
                 elem.prop("coords", `${xCoord}, ${yCoord}, ${areaRadius}`);
                 elem.prop("id", eventName);
+                const elemFinish = $("<area>");
+                elemFinish.prop("shape", "circle");
+                elemFinish.prop("coords", `${xCoord}, ${yCoord}, 0`);
+                elemFinish.prop("id", `Finish: ${eventName}`)
 
                 // DOM elements for Tooltipster
                 elem.addClass("tooltip");
+                elemFinish.addClass("tooltip");
                 elem.prop("title", eventName);
-                if (sheetName === "Event Destinations") {
-                    elem.prop("title", `Finish: ${elem.prop("title")}`);
-                }
-                if (sheetName === "Events") {
-                    const dest = $(`[id='${sheet[`F${row}`].v}']`);
-                    console.log(dest);
+                elemFinish.prop("title", `Finish: ${eventName}`);
+                if (sheetName === "Events" && sheet[`F${row}`]) {
+                    const dest = $(`[id='Finish: ${sheet[`F${row}`].v}']`);
                     elem.tooltipster({
                         functionBefore: () => dest.tooltipster("open"),
                         functionAfter: () => dest.tooltipster("close"),
                         distance: 0 // Need this to correctly activate on event nodes
                     });
+                } else {
+                    elem.tooltipster({distance: 0});
                 }
+                elemFinish.tooltipster({distance: 0});
                 imageMap.append(elem);
+                imageMap.append(elemFinish);
                 row++;
             }
         }
-        $(".tooltip").tooltipster({distance: 0});
     } catch (e) {
         console.error(e);
     }
