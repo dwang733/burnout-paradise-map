@@ -1,0 +1,25 @@
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .2em 0 .2em;
+    line-height: 1.5;
+}
+
+.ui-icon-search {
+    float: left;
+    margin-top: 2px;
+}
+
+#search {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 10px;
+}
+
+#searchbutton {
+    margin-bottom: 5px;
+}

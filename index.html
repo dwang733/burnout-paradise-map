@@ -8,20 +8,29 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.tooltipster/4.2.5/css/tooltipster.bundle.min.css"
           integrity="sha256-Qc4lCfqZWYaHF5hgEOFrYzSIX9Rrxk0NPHRac+08QeQ="
-          crossorigin="anonymous" defer>
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css"
+          integrity="sha256-RPilbUJ5F7X6DdeTO6VFZ5vl5rO5MJnmSk4pwhWfV8A="
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.8/xlsx.core.min.js"
             integrity="sha256-3UyP+ChcMZr/K4erzs5Uzapr9ne6Je9d0MlgRDNSWL8="
             crossorigin="anonymous" defer></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/jquery.tooltipster/4.2.5/js/tooltipster.bundle.min.js"
             integrity="sha256-kcjVrL0/A/khts0tpCzjw5bhx7+03BLTT9LbGW2cUQQ="
+            crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous" defer></script>
     <script src="index.js" defer></script>
 </head>
 
 <body>
+    <input type="text" id="search" placeholder="Search..." size="30">
+    <button id="searchbutton" class="ui-button ui-widget ui-corner-all">Go!</button>
     <img id="burnoutmap" src="map.jpg" usemap="#imageMap" hidden>
     <map name="imageMap" id="imageMap"></map>
 </body>
